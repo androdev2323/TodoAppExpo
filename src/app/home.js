@@ -1,12 +1,24 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { StyleSheet, TouchableOpacity, View } from 'react-native'
+import  CustomHeader from "../components/CustomHeader"
+import AddButton from '../components/AddButton'
+
 
 const Home = () => {
   return (
-    <View>
-      <Text>H</Text>
+    <View style= {style.container}>
+      <CustomHeader  Title="Todo App" isBackButton={true}/>
+     <AddButton /> 
     </View>
   )
 }
+const style = StyleSheet.create(
+   {
+    container:{
+      flex:1,
+      backgroundColor:'White'
+    } 
+
+  }
+)
 
 export default Home
