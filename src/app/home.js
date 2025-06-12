@@ -1,9 +1,12 @@
 import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import  CustomHeader from "../components/CustomHeader"
 import AddButton from '../components/AddButton'
+import { useSelector } from 'react-redux'
 
 
 const Home = () => {
+  const data= useSelector((state) => state.todo.data)
+  
   return (
     <View style= {style.container}>
       <CustomHeader  Title="Todo App" isBackButton={true}/>

@@ -1,5 +1,6 @@
 import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { router } from 'expo-router';
 
 const CustomHeader = ({Title,isBackButton}) => {
   return (
@@ -7,7 +8,7 @@ const CustomHeader = ({Title,isBackButton}) => {
         <SafeAreaView  style={styles.conainer} />
          <Text style={styles.text}>{Title}</Text>
         <View >
-        { isBackButton && (<TouchableOpacity style={styles.Button}>
+        { isBackButton && (<TouchableOpacity style={styles.Button} onPress={router.back}>
         <Ionicons name="arrow-back-circle-sharp" size={24} color="white" />
          </TouchableOpacity>)
                   }
